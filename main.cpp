@@ -13,7 +13,7 @@ void maybe_fence() {
 }
 
 int main() {
-    std::barrier barrier(2, []() {});
+    std::barrier barrier(2, []() noexcept {});
 
     std::atomic<int> x;
     std::atomic<int> y;
